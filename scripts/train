@@ -2,8 +2,10 @@
 # Copyright (c) 2019-present, HuggingFace Inc.
 # All rights reserved. This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of
 # this source tree.
+import tensorflow as tf
+import tensorboard as tb
+tf.io.gfile = tb.compat.tensorflow_stub.io.gfile
 
-from tensorboard.compat import tf
 import logging
 from pprint import pformat
 from argparse import ArgumentParser
